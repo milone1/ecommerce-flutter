@@ -6,11 +6,11 @@ import 'package:flutter/material.dart';
 import '../widgets/home_app_bar.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       body: ListView(
         children: [
           HomeAppBar(),
@@ -61,7 +61,7 @@ class HomePage extends StatelessWidget {
                 Container(
                   alignment: Alignment.centerLeft,
                   margin: EdgeInsets.symmetric(
-                    vertical: 20, 
+                    vertical: 20,
                     horizontal: 5,
                   ),
                   child: Text(
@@ -75,7 +75,7 @@ class HomePage extends StatelessWidget {
                 ),
                 // Categories
                 CategoriesWidget(),
-                //item 
+                //item
                 Container(
                   alignment: Alignment.centerLeft,
                   margin: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
@@ -97,7 +97,8 @@ class HomePage extends StatelessWidget {
       ),
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: Colors.transparent,
-        onTap: (index){},
+        onTap: (index) {
+        },
         height: 70,
         color: Color(0xFF4C53A5),
         items: [
@@ -115,7 +116,7 @@ class HomePage extends StatelessWidget {
             Icons.list,
             size: 30,
             color: Colors.white,
-          ), 
+          ),
         ],
       ),
     );

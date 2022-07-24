@@ -1,10 +1,13 @@
-import 'package:ecommerce_flutter/screens/cart_page.dart';
+import 'package:ecommerce_flutter/screens/cart_screen.dart';
 import 'package:ecommerce_flutter/screens/home_screen.dart';
+import 'package:ecommerce_flutter/screens/item_screen.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,7 +17,8 @@ class MyApp extends StatelessWidget {
         ),
         routes: {
           "/" : (context) => HomePage(),
-          "cartPage" : (context) => CartPage(), 
+          "cartPage" : (context) => CartPage(),
+          "itemPage" : (context) => ItemPage(),
       },
     );
   }

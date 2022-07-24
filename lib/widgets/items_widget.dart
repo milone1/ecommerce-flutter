@@ -4,12 +4,12 @@ class ItemsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    
+
     return GridView.count(
       childAspectRatio: 0.68,
       // this line disabled the scroll funcionality of gridview
       physics: NeverScrollableScrollPhysics(),
-      crossAxisCount: (width<=384? 2:3),
+      crossAxisCount: (width <= 384 ? 2 : 3),
       shrinkWrap: true,
       children: [
         for (int i = 1; i < 8; i++)
@@ -47,9 +47,11 @@ class ItemsWidget extends StatelessWidget {
                       color: Colors.red,
                     )
                   ],
-                ), 
+                ),
                 InkWell(
-                  onTap: (){},
+                  onTap: () {
+                    Navigator.pushNamed(context, "itemPage");
+                  },
                   child: Container(
                     margin: EdgeInsets.all(10),
                     child: Image.asset(
